@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class Week2Refresher {
 
@@ -12,13 +14,12 @@ public class Week2Refresher {
     @GetMapping("/products")
     public List<Product> getProductlist()
     {
-        return productlist;
+        return "";
     }
 
     @PostMapping("/products")
     public Product addProduct(@RequestBody Product product)
     {
-        productlist.add(product);
         return product;
     }
 }
